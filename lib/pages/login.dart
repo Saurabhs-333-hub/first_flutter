@@ -71,7 +71,7 @@ class _LoginState extends State<Login> {
                       setState(() {
                         button = true;
                       });
-                      await Future.delayed(const Duration(milliseconds: 200));
+                      await Future.delayed(const Duration(milliseconds: 800));
                       Navigator.pushNamed(context, MyRoutes.HomeRoute);
                     },
                     child: AnimatedContainer(
@@ -84,9 +84,12 @@ class _LoginState extends State<Login> {
                             borderRadius: button
                                 ? BorderRadius.circular(60)
                                 : BorderRadius.circular(10)),
-                        duration: const Duration(milliseconds: 200),
+                        duration: const Duration(milliseconds: 800),
                         child: button
-                            ? const Icon(Icons.done)
+                            ? const Icon(
+                                Icons.done,
+                                color: Colors.white,
+                              )
                             : const Text("Login",
                                 style: TextStyle(
                                   color: Colors.white,
